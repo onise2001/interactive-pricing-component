@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Interactive Pricing Component</title>
+  </head>
+  <body>
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <p class="header-paragraph">
+        Sign-up for our 30-day trial.No credit card required.
+      </p>
+    </header>
+    <main>
+      <div class="pricing">
+        <div class="pricing-wrapper">
+          <h2 class="card-title"><span class="views">100</span>K PAGEVIEWS</h2>
+
+          <h2 class="price">
+            <span class="price-text">$16.00</span
+            ><span class="price-month">/ month</span>
+          </h2>
+        </div>
+
+        <input
+          type="range"
+          min="10"
+          max="500"
+          step="10"
+          value="100"
+          name="price-range"
+          id="price-range"
+        />
+      </div>
+
+      <div class="billing">
+        <label for="monthly"> Monthly Billing</label>
+        <label class="switch">
+          <input type="checkbox" id="yearly-billing" />
+          <span class="slider round"></span>
+        </label>
+        <p class="yearly">
+          Yearly Billing
+          <span class="discount"
+            >-25% <span class="discount-text">discount</span></span
+          >
+        </p>
+      </div>
+      <div class="benefits">
+        <div class="benefits-wrapper">
+          <div class="benefit">
+            <img src="./images/reshot-icon-checkmark-GVRAE73C9Z.svg" alt="" />
+            <p>Unlimited websites</p>
+          </div>
+          <div class="benefit">
+            <img src="./images/reshot-icon-checkmark-GVRAE73C9Z.svg" alt="" />
+
+            <p>100% data ownership</p>
+          </div>
+          <div class="benefit">
+            <img src="./images/reshot-icon-checkmark-GVRAE73C9Z.svg" alt="" />
+
+            <p>Email reports</p>
+          </div>
+        </div>
+
+        <button class="start-button">Start my trial</button>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
