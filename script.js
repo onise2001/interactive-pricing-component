@@ -1,5 +1,6 @@
 const priceInput = document.querySelector("#price-range");
 const priceText = document.querySelector(".price-text");
+const priceMonth = document.querySelector(".price-month");
 const viewsText = document.querySelector(".views");
 const checkbox = document.querySelector("#yearly-billing");
 
@@ -19,7 +20,10 @@ function setPrice() {
   viewsText.textContent = priceInput.value;
   let currentPrice = priceInput.value * 1000 * pricePerVisit;
   if (checkbox.checked) {
-    currentPrice = currentPrice * 0.75;
+    currentPrice = currentPrice * 0.75 * 12;
+    priceMonth.textContent = "/ year";
+  } else {
+    priceMonth.textContent = "/ month";
   }
   priceText.textContent = `$${currentPrice.toFixed(2)}`;
 }
